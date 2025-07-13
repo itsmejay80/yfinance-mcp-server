@@ -13,7 +13,8 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
 
 setup(
     name="yfinance-mcp-server",
-    version="1.0.0",
+    use_scm_version=True,
+    setup_requires=["setuptools_scm"],
     author="Jayesh", 
     author_email="jaypatel6963@gmail.com", 
     description="A comprehensive yfinance MCP server providing access to Yahoo Finance data",

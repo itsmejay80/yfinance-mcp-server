@@ -1,10 +1,10 @@
 [build-system]
-requires = ["setuptools>=61.0", "wheel"]
+requires = ["setuptools>=61.0", "wheel", "setuptools_scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "yfinance-mcp-server"
-version = "1.0.0"
+dynamic = ["version"]
 authors = [
     {name = "Jayesh", email = "jaypatel6963@gmail.com"},
 ]
@@ -40,4 +40,7 @@ Homepage = "https://github.com/yourusername/yfinance-mcp-server"
 yfinance-mcp-server = "main:main"
 
 [tool.setuptools]
-py-modules = ["main"] 
+py-modules = ["main"]
+
+[tool.setuptools_scm]
+write_to = "version.py" 
