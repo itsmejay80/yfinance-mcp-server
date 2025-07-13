@@ -110,4 +110,7 @@ dmypy.json
 *.swo
 
 # macOS
-.DS_Store 
+.DS_Store
+
+# Auto-generated version file
+version.py 
