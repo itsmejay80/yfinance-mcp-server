@@ -26,7 +26,7 @@ Built with [FastMCP](https://gofastmcp.com) so you can plug it straight into any
 
 ## Requirements
 
-* Python 3.9+
+* Python 3.10+
 
 All dependencies are listed in `requirements.txt` (generated below).
 
