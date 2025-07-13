@@ -782,9 +782,6 @@ def configure_yfinance(
 def main():
     """Main entry point for the MCP server"""
     logger.info("Starting yfinance MCP server...")
-    # FastMCP's synchronous `run()` starts its own event loop.
-    # Using it directly avoids the "Already running asyncio" error that occurs
-    # when nesting event loops via `asyncio.run()`.
     mcp.run()
 
 if __name__ == "__main__":

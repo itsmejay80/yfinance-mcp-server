@@ -27,6 +27,7 @@ Built with [FastMCP](https://gofastmcp.com) so you can plug it straight into any
 ## Requirements
 
 * Python 3.10+
+* **pipx** (for MCP client integration)
 
 All dependencies are listed in `requirements.txt` (generated below).
 
@@ -37,6 +38,32 @@ fastmcp
 ```
 
 > If you already installed packages manually you can skip the next step.
+
+### Installing pipx
+
+If you don't have pipx installed, install it first:
+
+**macOS:**
+```bash
+brew install pipx
+```
+
+**Linux/Ubuntu:**
+```bash
+sudo apt install pipx
+# or
+python3 -m pip install --user pipx
+```
+
+**Windows:**
+```bash
+python -m pip install --user pipx
+```
+
+After installation, ensure pipx is in your PATH:
+```bash
+pipx ensurepath
+```
 
 ---
 
@@ -110,8 +137,12 @@ Add this to your Cursor MCP settings:
 ```json
 {
   "mcpServers": {
-    "yfinance-server": {
-      "command": "yfinance-mcp-server"
+    "yfinance": {
+      "command": "pipx",
+      "args": [
+        "run",
+        "yfinance-mcp-server"
+      ]
     }
   }
 }
@@ -124,8 +155,12 @@ Add this to your `claude_desktop_config.json`:
 ```json
 {
   "mcpServers": {
-    "yfinance-server": {
-      "command": "yfinance-mcp-server"
+    "yfinance": {
+      "command": "pipx",
+      "args": [
+        "run",
+        "yfinance-mcp-server"
+      ]
     }
   }
 }

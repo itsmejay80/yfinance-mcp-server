@@ -6,7 +6,6 @@ Simple tests for the yfinance MCP server
 import sys
 import subprocess
 import time
-import json
 
 def test_import():
     """Test that the main module can be imported"""
