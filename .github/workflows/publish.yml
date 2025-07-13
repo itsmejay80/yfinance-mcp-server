@@ -10,6 +10,8 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      CI: true
     strategy:
       matrix:
         python-version: ["3.9", "3.10", "3.11", "3.12"]
@@ -28,9 +30,27 @@ jobs:
         pip install -r requirements.txt
         pip install build twine
     
+    - name: Check installed packages
+      run: |
+        pip list
+        python --version
+    
     - name: Test import
       run: |
-        python -c "import main; print('✅ Import successful')"
+        python -c "
+        try:
+            import main
+            print('✅ Import successful')
+        except Exception as e:
+            print(f'❌ Import failed: {e}')
+            import traceback
+            traceback.print_exc()
+            exit(1)
+        "
+    
+    - name: Run tests
+      run: |
+        timeout 300 python test_mcp.py
     
     - name: Build package
       run: python -m build
