@@ -19,7 +19,7 @@ setup(
     description="A comprehensive yfinance MCP server providing access to Yahoo Finance data",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/yfinance-mcp-server",  # Replace with your GitHub repo
+    url="https://github.com/itsmejay80/yfinance-mcp-server",  # Replace with your GitHub repo
     packages=find_packages(),
     classifiers=[
         "Development Status :: 4 - Beta",
@@ -43,8 +43,8 @@ setup(
     },
     keywords="mcp, model-context-protocol, yfinance, yahoo-finance, stocks, financial-data",
     project_urls={
-        "Bug Reports": "https://github.com/yourusername/yfinance-mcp-server/issues",
-        "Source": "https://github.com/yourusername/yfinance-mcp-server",
-        "Documentation": "https://github.com/yourusername/yfinance-mcp-server#readme",
+        "Bug Reports": "https://github.com/itsmejay80/yfinance-mcp-server/issues",
+        "Source": "https://github.com/itsmejay80/yfinance-mcp-server",
+        "Documentation": "https://github.com/itsmejay80/yfinance-mcp-server#readme",
     },
 ) 

@@ -52,7 +52,7 @@ pip install yfinance-mcp-server
 
 ```bash
 # 1) Clone the repository
-git clone https://github.com/yourusername/yfinance-mcp-server.git
+git clone https://github.com/itsmejay80/yfinance-mcp-server.git
 cd yfinance-mcp-server
 
 # 2) (Optional) create a virtual environment
